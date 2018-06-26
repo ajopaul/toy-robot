@@ -1,0 +1,39 @@
+1. place 0,0,north
+move
+move
+move
+report
+expected: 0,3,NORTH
+
+2. place 1,2,west
+move
+left
+move
+report
+expected:0,1,SOUTH
+
+3.place 4,4,east
+move
+move
+move
+move
+left
+move
+move
+report
+expeted: 4,4,NORTH
+
+4. PLACE 4,4,EAST
+move
+right
+move
+report
+expected: 4,3,south
+
+5. place 1,2,east
+move
+move
+left
+move
+report
+expected: 3,3,NORTH
