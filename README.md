@@ -1,4 +1,6 @@
 # toy-robot
+## ***Application Overview***
+
 The application is a simulation of a toy robot moving on a square tabletop, of dimensions 5 units x 5 units.
 
 There are no other obstructions on the table surface.
@@ -24,3 +26,14 @@ MOVE will move the toy robot one unit forward in the direction it is currently f
 LEFT and RIGHT will rotate the robot 90 degrees in the specified direction without changing the position of the robot.
 
 REPORT will announce the X,Y and orientation of the robot.
+
+## ***SETUP***
+
+Make sure you have JDK8 and Maven installed in your machine. 
+
+To run the application on a *nix machine:
+<pre>
+$mvn clean install
+$mvn exec:java
+</pre>
+
