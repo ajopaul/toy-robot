@@ -5,7 +5,7 @@ The application is a simulation of a toy robot moving on a square tabletop, of d
 
 There are no other obstructions on the table surface.
 The robot is free to roam around the surface of the table, but must be prevented from falling to destruction. Any movement
-that would result in the robot falling from the table must be prevented, however further valid movement commands must still
+that would result in the robot falling from the table will be prevented, however further valid movement commands must still
 be allowed.
 
 This application can read in commands of the following form -
@@ -19,7 +19,7 @@ PLACE will put the toy robot on the table in position X,Y and facing NORTH, SOUT
 
 The origin (0,0) can be considered to be the SOUTH WEST most corner.
 
-The first valid command to the robot is a PLACE command, after that, any sequence of commands may be issued, in any order, including another PLACE command. The application should discard all commands in the sequence until a valid PLACE command has been executed.
+The first valid command to the robot is a PLACE command, after that, any sequence of commands may be issued, in any order, including another PLACE command. The application will discard all commands in the sequence until a valid PLACE command has been executed.
 
 MOVE will move the toy robot one unit forward in the direction it is currently facing.
 
