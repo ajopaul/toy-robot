@@ -146,7 +146,7 @@ public class CommandReader {
                 "EXIT\n" +
                 "\n" +
                 "PLACE will put the toy robot on the table (5x5) in position X,Y and facing NORTH, SOUTH, EAST or WEST.\n" +
-                "valid values for X,Y are 0,1,2,4. \n" +
+                "valid values for X,Y are 0,1,2,3,4. \n" +
                 "The first valid command to the robot is a PLACE command\n" +
                 "MOVE will move the toy robot one unit forward in the direction it is currently facing.\n" +
                 "LEFT and RIGHT will rotate the robot 90 degrees in the specified direction without changing the position of the robot.\n" +
