@@ -1,6 +1,7 @@
 package com.ajopaul.toyrobot;
 
 import com.ajopaul.toyrobot.exceptions.AppException;
+import junit.framework.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -136,5 +137,15 @@ public class TestToyRobot {
         toyRobot.commandMove();
         String message = toyRobot.commandReport();
         assertEquals("2,4,NORTH", message);
+    }
+
+    @Test
+    public void testMovement3(){
+        toyRobot.commandPlace(0,1,"north");
+        toyRobot.commandLeft();
+        toyRobot.commandReport();
+        toyRobot.commandMove();
+        String message = toyRobot.commandReport();
+        assertEquals("0,1,WEST", message);
     }
 }

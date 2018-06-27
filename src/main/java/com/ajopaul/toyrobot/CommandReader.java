@@ -65,22 +65,23 @@ public class CommandReader {
      * @return
      */
     public String processCommand(String commandText){
-
         String message = null;
-        if(commandText.contains(COMMAND_PLACE)){
-            if(!isPlaceCommandValid(commandText)){
-                message = "Invalid PLACE command. type 'help' for options.";
-            }else{
-                String placeArgs = commandText.substring(6);
-                loaded = true;
-                processPlaceCommand(placeArgs);
+        if(null != commandText) {
+            if (commandText.contains(COMMAND_PLACE)) {
+                if (!isPlaceCommandValid(commandText)) {
+                    message = "Invalid PLACE command. type 'help' for options.";
+                } else {
+                    String placeArgs = commandText.substring(6);
+                    loaded = true;
+                    processPlaceCommand(placeArgs);
+                }
+            } else if (!Arrays.asList(validCommands).contains(commandText)) {
+                message = "Unknown Command. type 'help' for options.";
+            } else if (!loaded && !commandText.equals(COMMAND_PLACE) && !commandText.equals(COMMAND_HELP) && !commandText.equals(COMMAND_EXIT)) {
+                message = "Invalid initial command. type 'help' for options.";
+            } else {
+                message = processOtherCommand(commandText);
             }
-        }else if(!Arrays.asList(validCommands).contains(commandText)){
-            message = "Unknown Command. type 'help' for options.";
-        }else if(!loaded && !commandText.equals(COMMAND_PLACE) && !commandText.equals(COMMAND_HELP) && !commandText.equals(COMMAND_EXIT)){
-            message = "Invalid initial command. type 'help' for options.";
-        }else{
-            message = processOtherCommand(commandText);
         }
         return message;
     }

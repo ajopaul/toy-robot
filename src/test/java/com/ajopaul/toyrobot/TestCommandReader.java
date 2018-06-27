@@ -41,6 +41,12 @@ public class TestCommandReader {
     }
 
     @Test
+    public void testInvalidPlaceCommand3() {
+        String message = commandReader.processCommand(null);
+        assertTrue(message == null);
+    }
+
+    @Test
     public void testPlaceCommand() {
         commandReader.processCommand("place 0,0,north");
         String message = commandReader.processCommand("report");
